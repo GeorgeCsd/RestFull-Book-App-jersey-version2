@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="RestController" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+            <class>org.example.Book</class>
+        <properties>
+            <property name="javax.persistence.schema-generation-action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation-target" value="database"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/booksdb"/>
+            <property name="javax.persistence.jdbc.user" value="esp32"/>
+            <property name="javax.persistence.jdbc.password" value="microcontrollerslab@123"/>
+            <property name="dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true"/>
+
+            <!-- SQL dialect -->
+
+
+            <!-- Echo all executed SQL to stdout -->
+            <!--<property name="show_sql" value="true"/> -->
+
+
+        </properties>
+    </persistence-unit>
+</persistence>

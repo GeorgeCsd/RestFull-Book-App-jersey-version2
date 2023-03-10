@@ -1,0 +1,9 @@
+org\example\BasePath.class
+org\example\Main.class
+org\example\Response.class
+org\example\MySqlDatabase.class
+org\example\BookRestService.class
+org\example\Books.class
+org\example\BookService.class
+org\example\EntityManagerProducer.class
+org\example\Book.class
